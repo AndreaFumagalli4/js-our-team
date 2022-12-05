@@ -66,11 +66,13 @@ const memberImage = document.createElement('img');
 // 2.
 
 for ( let i = 0; i < teamMember.length; i++) {
-    console.log('Name = ' + teamMember[i].name);
-    console.log('role = ' + teamMember[i].role);
-    console.log('photo = ' + teamMember[i].photo);
+    // console.log('Name = ' + teamMember[i].name);
+    // console.log('role = ' + teamMember[i].role);
+    // console.log('photo = ' + teamMember[i].photo);
     text.innerHTML += `${teamMember[i].name} `;
     text.innerHTML += `${teamMember[i].role} `;
-    memberImage.innerHTML = `${teamMember[i].photo} `;
+    memberImage.src = teamMember[i].photo;
+    console.log(memberImage);
+    text.append(memberImage);
     text.append(breakRow);
 }
