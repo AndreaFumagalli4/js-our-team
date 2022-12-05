@@ -61,6 +61,8 @@ const text = document.getElementById('output');
 
 const breakRow = document.createElement('br');
 
+const memberImage = document.createElement('img');
+
 // 2.
 
 for ( let i = 0; i < teamMember.length; i++) {
@@ -69,8 +71,6 @@ for ( let i = 0; i < teamMember.length; i++) {
     console.log('photo = ' + teamMember[i].photo);
     text.innerHTML += `${teamMember[i].name} `;
     text.innerHTML += `${teamMember[i].role} `;
-    text.innerHTML += `${teamMember[i].photo} `;
+    memberImage.innerHTML = `${teamMember[i].photo} `;
     text.append(breakRow);
 }
-
-
