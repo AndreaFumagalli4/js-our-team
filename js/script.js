@@ -55,10 +55,20 @@ const teamMember = [
     }
 ]
 
+// 3.
+
+const text = document.getElementById('output');
+
 // 2.
 
 for ( let i = 0; i < teamMember.length; i++) {
     console.log('Name = ' + teamMember[i].name);
     console.log('role = ' + teamMember[i].role);
     console.log('photo = ' + teamMember[i].photo);
+    text.innerHTML += `Name = ${teamMember[i].name}`;
+    text.innerHTML += `Role = ${teamMember[i].role}`;
+    text.innerHTML += `Photo = ${teamMember[i].photo}`;
+
 }
+
+
