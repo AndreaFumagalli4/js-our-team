@@ -20,6 +20,8 @@
  *  3. - Stampo nel domgli oggetti
  */
 
+// 1.
+
 const teamMember = [
     {
         name : 'Wayne Barnett',
@@ -52,3 +54,11 @@ const teamMember = [
         photo : 'barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+// 2.
+
+for ( let i = 0; i < teamMember.length; i++) {
+    console.log('Name = ' + teamMember[i].name);
+    console.log('role = ' + teamMember[i].role);
+    console.log('photo = ' + teamMember[i].photo);
+}
