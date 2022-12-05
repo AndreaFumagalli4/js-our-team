@@ -57,17 +57,22 @@ const teamMember = [
 
 // 3.
 
-const text = document.getElementById('output');
-
-const breakRow = document.createElement('br');
+const card = document.getElementById('output');
+// const breakRow = document.createElement('br');
 
 // 2.
 
 for ( let i = 0; i < teamMember.length; i++) {
+    const newSquare = document.createElement('div');
+    newSquare.classList.add('cards');
+    const memberName = document.createElement('h3');
+    const memberRole = document.createElement('p');
     const memberImage = document.createElement('img');
-    text.innerHTML += `${teamMember[i].name} `;
-    text.innerHTML += `${teamMember[i].role} `;
+    memberImage.classList.add('w-75');
+    memberName.innerHTML += `${teamMember[i].name} `;
+    memberRole.innerHTML += `${teamMember[i].role} `;
     memberImage.src = './img/' + teamMember[i].photo;
-    text.append(memberImage);
-    text.append(breakRow);
+    newSquare.append(memberName, memberRole, memberImage);
+    card.append(newSquare);
+    // text.append(breakRow);
 }
