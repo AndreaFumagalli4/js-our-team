@@ -1,0 +1,4 @@
+div.square {
+    width: calc(100% / 3);
+    border-radius: 40px;
+}

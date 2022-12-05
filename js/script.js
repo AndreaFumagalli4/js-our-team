@@ -61,18 +61,13 @@ const text = document.getElementById('output');
 
 const breakRow = document.createElement('br');
 
-const memberImage = document.createElement('img');
-
 // 2.
 
 for ( let i = 0; i < teamMember.length; i++) {
-    // console.log('Name = ' + teamMember[i].name);
-    // console.log('role = ' + teamMember[i].role);
-    // console.log('photo = ' + teamMember[i].photo);
+    const memberImage = document.createElement('img');
     text.innerHTML += `${teamMember[i].name} `;
     text.innerHTML += `${teamMember[i].role} `;
-    memberImage.src = teamMember[i].photo;
-    console.log(memberImage);
+    memberImage.src = './img/' + teamMember[i].photo;
     text.append(memberImage);
     text.append(breakRow);
 }
